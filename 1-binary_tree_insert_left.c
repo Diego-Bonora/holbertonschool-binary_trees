@@ -8,7 +8,10 @@ binary_tree_t
 	new = malloc(sizeof(binary_tree_t));
 
 	if (new == NULL)
+	{
+		free(new);
 		return (NULL);
+	}
 
 	new->n = value;
 	new->parent = parent;
