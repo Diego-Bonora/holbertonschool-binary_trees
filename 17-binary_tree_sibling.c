@@ -10,7 +10,6 @@ binary_tree_t
 		return (NULL);
 	}
 
-	
 	parent = node->parent;
 
 	if (parent->left == node)
