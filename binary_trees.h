@@ -1,6 +1,7 @@
 #ifndef _BINARY_TREES_H_
 #define _BINARY_TREES_H_
 
+#include <stdbool.h>
 #include <string.h>
 #include <stddef.h>
 #include <stdlib.h>
@@ -23,6 +24,7 @@ typedef struct binary_tree_s
 	struct binary_tree_s *right;
 } binary_tree_t;
 
+int count_nodes(const binary_tree_t *tree);
 int binary_tree_is_root(const binary_tree_t *node);
 int binary_tree_is_leaf(const binary_tree_t *node);
 void binary_tree_delete(binary_tree_t *tree);
@@ -30,5 +32,10 @@ binary_tree_t *binary_tree_insert_right(binary_tree_t *parent, int value);
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value);
 void binary_tree_print(const binary_tree_t *);
 binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value);
+int binary_tree_is_perfect(const binary_tree_t *tree);
+binary_tree_t *binary_tree_sibling(binary_tree_t *node);
+binary_tree_t *binary_tree_uncle(binary_tree_t *node);
+int binary_tree_height(const binary_tree_t *tree);
+bool is_perfect_recursive(const binary_tree_t *tree, int level, int depth);
 
 #endif /* _BINARY_TREES_H_ */
