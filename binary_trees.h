@@ -37,7 +37,7 @@ binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value);
 int binary_tree_is_perfect(const binary_tree_t *tree);
 binary_tree_t *binary_tree_sibling(binary_tree_t *node);
 binary_tree_t *binary_tree_uncle(binary_tree_t *node);
-int binary_tree_height(const binary_tree_t *tree);
+size_t binary_tree_height(const binary_tree_t *tree);
 bool is_perfect_recursive(const binary_tree_t *tree, int level, int depth);
 void binary_tree_preorder(const binary_tree_t *tree, void (*func)(int));
 void binary_tree_inorder(const binary_tree_t *tree, void (*func)(int));

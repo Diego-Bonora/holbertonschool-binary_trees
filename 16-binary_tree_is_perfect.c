@@ -30,9 +30,7 @@ binary_tree_is_perfect(const binary_tree_t *tree)
 	left_count = count_nodes(tree->left);
 	right_count = count_nodes(tree->right);
 
-	if (left_count == right_count &&
-			binary_tree_is_perfect(tree->left) &&
-			binary_tree_is_perfect(tree->right))
+	if (left_count == right_count)
 		return (1);
 
 	return (0);
