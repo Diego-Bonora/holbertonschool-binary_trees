@@ -56,6 +56,7 @@ binary_tree_t
 				break;
 		}
 	}
+	free(array1), free(array2);
 	if (value != 0)
 	{
 		if (first->n == value)
