@@ -7,7 +7,9 @@ binary_tree_is_perfect(const binary_tree_t *tree)
 	if (tree == NULL)
 		return (0);
 
-	if (binary_tree_is_full(tree) && (binary_tree_height(tree->left) == binary_tree_height(tree->right)))
+	if (binary_tree_is_full(tree) &&
+	 (binary_tree_height(tree->left) == binary_tree_height(tree->right) &&
+	  (binary_tree_size(tree->left) == binary_tree_size(tree->right))))
 		return (1);
 	return (0);
 }
@@ -54,6 +56,25 @@ size_t binary_tree_height(const binary_tree_t *tree)
 			else
 				return (right + 1);
 		}
+	}
+	return (0);
+}
+
+/**
+ * binary_tree_size - finds and returns the amount of nodes in the tree
+ * @tree: imput node
+ * Return: amount of nodes in the tree
+*/
+
+size_t binary_tree_size(const binary_tree_t *tree)
+{
+	size_t left, right;
+
+	if (tree)
+	{
+		left = binary_tree_size(tree->left);
+		right = binary_tree_size(tree->right);
+		return (left + right + 1);
 	}
 	return (0);
 }
