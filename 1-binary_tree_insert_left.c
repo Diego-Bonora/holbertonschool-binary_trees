@@ -20,7 +20,7 @@ binary_tree_t
 		new->left = NULL;
 		new->right = NULL;
 
-	
+
 		if (parent->left != NULL)
 		{
 			parent->left->parent = new;

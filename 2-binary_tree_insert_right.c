@@ -7,7 +7,7 @@ binary_tree_t
 
 	if (parent != NULL)
 	{
-	
+
 		new = malloc(sizeof(binary_tree_t));
 
 		if (new == NULL)
