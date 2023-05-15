@@ -18,6 +18,9 @@ binary_tree_t
 	size_t counter1 = 1, counter2 = 1;
 	binary_tree_t *temp = NULL;
 
+	if (!first || !second)
+		return (NULL);
+
 	array1 = malloc(sizeof(int) * (arr1 + 1));
 	if (!array1)
 		return (NULL);
