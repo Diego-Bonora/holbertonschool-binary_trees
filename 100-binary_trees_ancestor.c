@@ -18,10 +18,10 @@ binary_tree_t
 	size_t counter1 = 1, counter2 = 1;
 	binary_tree_t *temp = NULL;
 
-	array1 = malloc(sizeof(int) * arr1);
+	array1 = malloc(sizeof(int) * (arr1 + 1));
 	if (!array1)
 		return (NULL);
-	array2 = malloc(sizeof(int) * arr2);
+	array2 = malloc(sizeof(int) * (arr2 + 1));
 	if (!array2)
 		return (NULL);
 
