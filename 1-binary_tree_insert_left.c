@@ -5,30 +5,31 @@ binary_tree_t
 {
 	binary_tree_t *new;
 
-	new = malloc(sizeof(binary_tree_t));
-
-	if (new == NULL)
-	{
-		free(new);
-		return (NULL);
-	}
-
-	new->n = value;
-	new->parent = parent;
-	new->left = NULL;
-	new->right = NULL;
-
 	if (parent != NULL)
 	{
+		new = malloc(sizeof(binary_tree_t));
+
+		if (new == NULL)
+		{
+			free(new);
+			return (NULL);
+		}
+
+		new->n = value;
+		new->parent = parent;
+		new->left = NULL;
+		new->right = NULL;
+
+	
 		if (parent->left != NULL)
 		{
 			parent->left->parent = new;
 			new->left = parent->left;
 		}
 		parent->left = new;
+		return (new);
 	}
-
-	return (new);
+	return (0);
 }
 
 
